@@ -2,7 +2,7 @@
 
 This repository includes R code for FPCA-GP proposed in the paper "[Functional Principal Component Analysis for Extrapolating Multistream Longitudinal Data](https://ieeexplore.ieee.org/abstract/document/9258998)" by [S. Chung](https://sites.google.com/site/schungkorea/) and R. Kontar. 
 
-The advance of modern sensor technologies enables collection of multistream longitudinal data where multiple signals from different units are collected in real-time. Here the model aims to predict the future evolution of multistream signals from an in-service unit, based on historical data from other units previously operated. For more details, please find the [paper](https://ieeexplore.ieee.org/abstract/document/9258998).
+The advance of modern sensor technologies enables collection of multistream longitudinal data where multiple signals from different units are collected in real-time. Here the model aims to predict the future evolution of multistream signals from an in-service unit, based on historical data from other units previously operated. For more details, please see the [paper](https://ieeexplore.ieee.org/abstract/document/9258998).
 
 <img src="figs/multistream.png" alt="drawing" width="700"/>
 
