@@ -11,7 +11,7 @@ library(nlme)
 n1=45; n2=5
 n=n1+n2; len=40; pct=0.250; len.ex=40; past=0;   #%=m-1/len-1  # n = Number of output len=length of each output m= observations from p
 sigma = 0.3; sigma.ex = 0.05
-cut=10 #cut is the time at which I dont accept failure
+cut=10 
 
 ploty=30
 
@@ -37,10 +37,10 @@ test.exdata = external_generation(n=n.test, len=len.ex, cutt=cut,
                                   past=past, sigma=sigma.ex, type=test.iman$type, 
                                   death=iman$death, param1=test.iman$w1)
 
-data = iman$bdata; #death=iman$death; #Bmat=iman$Bmat
+data = iman$bdata; 
 ex.data = exdata$exdata
 
-test.data = test.iman$bdata #test.death=test.iman$death; #Bmat=iman$Bmat
+test.data = test.iman$bdata 
 test.ex.data = test.exdata$exdata
 
 test.w1 = test.iman$w1
@@ -258,10 +258,6 @@ plot(obss[[i]],obsy[[i]],xlim=c(0,10),ylim=c(0,ploty),'p',cex=1,pch=16,col=1,lwd
 sigma.prior = fpca$sigma2
 prior.mu = rep(0,neigenf)
 prior.lambda = diag(unlist(fpca$evalues))
-
-# P = fpca.eigenf[1:obs.n,]
-# S = obsy[[i]]
-# mu = fpca.mu[1:obs.n]
 
 C = solve( 1/sigma.prior * t(P) %*% P + solve(prior.lambda) )
 d = 1/sigma.prior * t(P) %*% (S - mu) 
